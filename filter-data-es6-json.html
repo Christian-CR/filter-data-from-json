@@ -1,0 +1,84 @@
+<div class="wrapDescargablesProductos">
+
+	<!--<div class="itemDescargar">
+		<div class="foto"><img src="" alt=""></div>
+		<div class="wrap">
+			<div class="titulo">Descargables</div>
+			<div class="link">
+				<a href="">Descargar</a>
+			</div>
+		</div>
+	</div>-->
+	<article>
+		<h2>Plantillas</h2>
+		<div class="descP"></div>
+	</article>
+	<article>
+		<h2>Tarifarios</h2>
+		<div class="descT"></div>
+	</article>
+	
+	
+	
+
+</div>
+
+<script>
+let urls = [
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla 5x8 a morir.pdf", nombre: "Plantilla 5x8 a morir.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla 5x9 modulada.PDF", nombre: "Plantilla 5x9 modulada.PDF"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Al Dia.pdf", nombre: "Plantilla Al Dia.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Buscomi.pdf", nombre: "Plantilla Buscomi.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Desplegable 10x20 La Nacion-La Teja.pdf", nombre: "Plantilla Desplegable 10x20 La Nacion-La Teja.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Revista Bienestar.pdf", nombre: "Plantilla Revista Bienestar.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Revista Dominical.pdf", nombre: "Plantilla Revista Dominical.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Revistas Mama-Su Casa-Novias-Vivir y Comer.pdf", nombre: "Plantilla Revistas Mama-Su Casa-Novias-Vivir y Comer.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla Revistas Perfil-Sabores-Pensiones-Correr.pdf", nombre: "Plantilla Revistas Perfil-Sabores-Pensiones-Correr.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantilla modulada suplemento Dia de la Madre.PDF", nombre: "Plantilla modulada suplemento Dia de la Madre.PDF"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantillas Nacion-La Teja-EF.pdf", nombre: "Plantillas Nacion-La Teja-EF.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantillas Paginas dobles La Nacion-La Teja.pdf", nombre: "Plantillas Paginas dobles La Nacion-La Teja.pdf"},
+			{plantillas: "plantillas", url: "http://gncpassword.com/downloads/tarifarios/Plantillas Teleguia-Pasatiempos.pdf", nombre: "Plantillas Teleguia-Pasatiempos.pdf"},
+		
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/Tarifario GN Comercial Enero 2017.pdf", nombre: "Tarifario GN Comercial Enero 2017.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/Tarifario2015-16.pdf", nombre: "Tarifario2015-16.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/Tarifario2018.pdf", nombre: "Tarifario2018.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/TarifarioBV2017.pdf", nombre: "TarifarioBV2017.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/TarifarioGn_2013.pdf", nombre: "TarifarioGn_2013.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/TarifarioGn_2014.pdf", nombre: "TarifarioGn_2014.pdf"},
+			{tarifarios: "tarifarios", url: "http://gncpassword.com/downloads/tarifarios/tarifario-completo-abril-2018.pdf", nombre: "tarifario-completo-abril-2018.pdf"}
+			]
+		
+			let xx = urls.filter(() => {
+    			return urls.filter(e => e)
+				}).filter(e => e.plantillas === 'plantillas')
+    				.map(e => e.url)  // retorna la url de plantillas
+
+			let x2 = urls.filter(() => {
+    			return urls.filter(e => e)
+				}).filter(e => e.tarifarios === 'tarifarios')
+    				.map(e => e.url) // retorna la url de tarifarios
+
+			let x3 = urls.filter(() => {
+    			return urls.filter(e => e)
+				}).filter(e => e.plantillas === 'plantillas')
+    				.map(e => e.nombre) // retorna la nombre de plantillas
+
+			let x4 = urls.filter(() => {
+    			return urls.filter(e => e)
+				}).filter(e => e.tarifarios === 'tarifarios')
+    				.map(e => e.nombre) // retorna la nombre de tarifarios
+
+    		let dvpl = jQuery('.descP')
+    		let dvta = jQuery('.descT')
+
+    		for(var i = 0; i <= xx.length -1; i++) {
+    			let rpp = '<div class="itemDescargar"><div class="foto"><img src="" alt=""></div><div class="wrap"><div class="titulo">'+x3[i]+'</div><div class="link"><a href="'+xx[i]+'" target="_blanc">Descargar</a></div></div></div>';
+		        dvpl.append(rpp);	
+		     }
+		     for(var i = 0; i <= x4.length -1; i++) {
+				let rpt = '<div class="itemDescargar"><div class="foto"><img src="" alt=""></div><div class="wrap"><div class="titulo">'+x4[i]+'</div><div class="link"><a href="'+x2[i]+'" target="_blanc">Descargar</a></div></div></div>';
+				dvta.append(rpt);
+		     }
+
+	
+</script>
